@@ -1,0 +1,303 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* position: relative; */
+}
+
+/* .container {
+  display: flex;
+  flex-direction: row;
+} */
+
+
+body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgb(234, 252, 248) 0%, #0c8076 100%);
+}
+.container {
+  position: relative;
+  top: 30px;
+  left: 120px;
+  background: rgb(101, 167, 161);
+  height: 480px;
+  width: 400px;
+  border-radius: 10px;
+
+}
+
+/* .span { */
+
+  /* width: 100%; */
+  /* margin-top:10px; */
+  /* position: relative; */
+  /* top: 0;
+  right: 0; */
+  /* background: blue;
+  height: 0px; */
+
+/* } */
+
+.date {
+  width: 350px;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  background: #fff;
+  height: 60px;
+  font-size: 28px;
+  padding: 10px 30px;
+  color: rgb(95, 193, 211);
+  border-radius: 10px;
+  margin: 8px;
+}
+
+
+
+.weather {
+  max-width: 350px;
+  width: 100%;
+  /* max-height: 400px; */
+  /* max-height: 400px;
+  height: 100%; */
+  position: absolute;
+  top: 80px;
+  left: 15px;
+  /* float: left; */
+  background: #fff;
+  height: 370px;
+  color: rgb(95, 193, 211);
+  padding: 10px;
+  margin: 10px;
+  /* padding: 10px 0; */
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 10px;
+  text-align:right;
+}
+
+select {
+  position: absolute;
+  top: 250px;
+  left: 90px;
+  margin-top: 55px;
+  margin-left: 7px;
+  width: 150px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 550;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-color: rgb(84, 131, 139);
+  color: rgb(84, 131, 139);
+  border-width: 1px
+}
+
+
+.weather ul {
+  max-width: 400px;
+  min-width: 100px;
+}
+
+.weather ul li:last-of-type {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  bottom: 20px;
+  font-size: 1px;
+}
+
+.weather ul li {
+  color: rgb(84, 131, 139);
+  /* display: inline; */
+  list-style-type: none;
+  margin: 10px 30px 10px 0px;
+  /* transition: 0.2s; */
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align:right;
+}
+
+/* .weather img {
+  max-width:70px;
+} */
+
+/* -------------------------- */
+
+
+::selection{
+  color: #ffff;
+  background: rgb(90, 106, 109);
+}
+
+.wrapper{
+  position: absolute;
+  top: 40px;
+  right: 170px;
+  background: #fff;
+  max-width: 500px;
+  max-height: 480px;
+  width: 100%;
+  height: 100%;
+  margin: 10px 20p 20px 500px;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+
+.wrapper header{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.wrapper .inputField{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+
+.inputField input{
+  width: 90%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid rgb(84, 131, 139);
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.inputField input:focus{
+  border-color: rgb(42, 81, 88);
+  background: rgb(218, 245, 248);
+}
+
+.inputField button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: rgb(84, 131, 139);
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.inputField button:hover,
+.footer button:hover{
+  background: rgb(84, 131, 139);
+}
+
+.inputField button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .todoList{
+  max-height: 250px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.check {
+  margin: 0 10px 0 0;
+  position: relative;
+  right: +45px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.check:checked + span {
+  color: rgb(84, 131, 139);
+  text-decoration: line-through;
+}
+
+.todoList li{
+  position: relative;
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  margin-bottom: 8px;
+  background: #80bdb8;
+  border-radius: 3px;
+  padding: 0 15px;
+  cursor: default;
+  overflow: hidden;
+}
+
+.todoList li .icon{
+  position: absolute;
+  right: -45px;
+  background: rgb(84, 131, 139);
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.todoList li:hover {
+  background: rgb(157, 200, 207);
+  cursor: pointer;
+}
+
+.todoList li:hover .icon,.todoList li:hover .check{
+  right: 0px;
+}
+
+.wrapper .footer{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer button{
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: rgb(84, 131, 139);
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+
+.footer button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.redl {
+  color: red;
+}
+
+.pending, .done {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.pending {
+  margin-right: 15px;
+}
