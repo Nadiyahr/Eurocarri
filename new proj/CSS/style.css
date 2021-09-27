@@ -1,8 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* position: relative; */
 }
 
@@ -11,8 +11,7 @@
   flex-direction: row;
 } */
 
-
-body{
+body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -27,22 +26,22 @@ body{
   height: 480px;
   width: 400px;
   border-radius: 10px;
-
 }
 
 /* .span { */
 
-  /* width: 100%; */
-  /* margin-top:10px; */
-  /* position: relative; */
-  /* top: 0;
+/* width: 100%; */
+/* margin-top:10px; */
+/* position: relative; */
+/* top: 0;
   right: 0; */
-  /* background: blue;
+/* background: blue;
   height: 0px; */
 
 /* } */
 
 .date {
+  display: inline-block;
   width: 350px;
   position: absolute;
   top: 5px;
@@ -55,8 +54,6 @@ body{
   border-radius: 10px;
   margin: 8px;
 }
-
-
 
 .weather {
   max-width: 350px;
@@ -76,7 +73,7 @@ body{
   /* padding: 10px 0; */
   /* border: 1px solid #e0e0e0; */
   border-radius: 10px;
-  text-align:right;
+  text-align: right;
 }
 
 select {
@@ -95,9 +92,8 @@ select {
   border-radius: 5px;
   border-color: rgb(84, 131, 139);
   color: rgb(84, 131, 139);
-  border-width: 1px
+  border-width: 1px;
 }
-
 
 .weather ul {
   max-width: 400px;
@@ -120,7 +116,7 @@ select {
   /* transition: 0.2s; */
   font-size: 25px;
   margin-bottom: 20px;
-  text-align:right;
+  text-align: right;
 }
 
 /* .weather img {
@@ -129,13 +125,12 @@ select {
 
 /* -------------------------- */
 
-
-::selection{
+::selection {
   color: #ffff;
   background: rgb(90, 106, 109);
 }
 
-.wrapper{
+.wrapper {
   position: absolute;
   top: 40px;
   right: 170px;
@@ -147,22 +142,22 @@ select {
   margin: 10px 20p 20px 500px;
   padding: 25px;
   border-radius: 5px;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper header{
+.wrapper header {
   font-size: 30px;
   font-weight: 600;
 }
 
-.wrapper .inputField{
+.wrapper .inputField {
   margin: 20px 0;
   width: 100%;
   display: flex;
   height: 45px;
 }
 
-.inputField input{
+.inputField input {
   width: 90%;
   height: 100%;
   outline: none;
@@ -173,12 +168,12 @@ select {
   transition: all 0.3s ease;
 }
 
-.inputField input:focus{
+.inputField input:focus {
   border-color: rgb(42, 81, 88);
   background: rgb(218, 245, 248);
 }
 
-.inputField button{
+.inputField button {
   width: 50px;
   height: 100%;
   border: none;
@@ -195,16 +190,16 @@ select {
 }
 
 .inputField button:hover,
-.footer button:hover{
+.footer button:hover {
   background: rgb(84, 131, 139);
 }
 
-.inputField button.active{
+.inputField button.active {
   opacity: 1;
   pointer-events: auto;
 }
 
-.wrapper .todoList{
+.wrapper .todoList {
   max-height: 250px;
   height: 100%;
   overflow-y: auto;
@@ -223,7 +218,7 @@ select {
   text-decoration: line-through;
 }
 
-.todoList li{
+.todoList li {
   position: relative;
   list-style: none;
   height: 45px;
@@ -236,7 +231,7 @@ select {
   overflow: hidden;
 }
 
-.todoList li .icon{
+.todoList li .icon {
   position: absolute;
   right: -45px;
   background: rgb(84, 131, 139);
@@ -253,11 +248,12 @@ select {
   cursor: pointer;
 }
 
-.todoList li:hover .icon,.todoList li:hover .check{
+.todoList li:hover .icon,
+.todoList li:hover .check {
   right: 0px;
 }
 
-.wrapper .footer{
+.wrapper .footer {
   display: flex;
   width: 100%;
   margin-top: 20px;
@@ -265,7 +261,7 @@ select {
   justify-content: space-between;
 }
 
-.footer button{
+.footer button {
   padding: 6px 10px;
   border-radius: 3px;
   border: none;
@@ -282,8 +278,7 @@ select {
   transition: all 0.3s ease;
 }
 
-
-.footer button.active{
+.footer button.active {
   opacity: 1;
   pointer-events: auto;
 }
@@ -292,7 +287,8 @@ select {
   color: red;
 }
 
-.pending, .done {
+.pending,
+.done {
   display: flex;
   flex-direction: row;
   margin: 5px;
@@ -300,4 +296,32 @@ select {
 
 .pending {
   margin-right: 15px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    right: 50px;
+  }
+  .container {
+    left: 50px;
+  }
+}
+@media (max-width: 1010px) {
+  .wrapper {
+    right: 0px;
+  }
+  .container {
+    left: 0px;
+  }
+}
+
+@media (max-width: 910px) {
+  .wrapper {
+    display: inline-block;
+    width: 100%;
+  }
+  .date, .weather {
+    display: inline-block;
+    width: 100%;
+  }
 }
